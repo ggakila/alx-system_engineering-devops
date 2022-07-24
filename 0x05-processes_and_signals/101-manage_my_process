@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# This script manages manage_my_process.
+# shellcheck disable=SC1091
+. /lib/lsb/init-functions
+
+file="/var/run/my_process.pid"
+function start()
+{
+    ./manage_my_process &
+    echo $! > $file # $! to get child pid
+    echo "manage_my_process started"
+}
+
+function stop()
+{
+    kill -15 "$(cat $file)"
+    echo "manage_my_process stopped"
+    rm $file
+}
+
+function restart()
+{
+    kill -15 "$(cat $file)" # kill child pid
+    rm $file
+    ./manage_my_process &
+    echo $! > $file # $! to get child pid
+    echo "manage_my_process restarted"
+}
+
+case "$1" in
+    "start" )
+    start ;;
+    "stop" )
+    stop ;;
+    "restart" )
+    restart ;;
+    * )
+    echo "Usage: manage_my_process {start|stop|restart}" ;;
+esac
