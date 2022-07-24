@@ -1,12 +1,20 @@
-# BASH SCRIPTING - Processes and signals
-**Learning the use of bash processes and signals**
+**0x05. Processes and signals**
 
-## Functions Learned🌟
-**The folloowing are the functions applied and learnt during this project:**
-- Knowledge of `kill`and `pkill` to kill processes in bash
-- Knowledge of `trap` to control the signals - `SIGINT`, `SIGKILL`, `SIGTERM`, etc - in bash
-- Knowledge of `pgrep` and `ps` to display a particular process or all the processes running in bash
-- Knowledge of `xarg` to execute a piped command
+At the end of this project, I am excepted to be able to explain:
+    
+ -  What is a PID
+ -  What is a process
+ -  How to find a process’ PID
+ -  How to kill a process
+ -  What is a signal
+ -  What are the 2 signals that cannot be ignored
 
-**Aside those functions i learnt the use of `&` single ampersand to duplicate processes in bash**<br>
-**Thank you!!😁**
+
+# Links
+
+**Read and Watch**
+
+  - [Linux PID](https://alx-intranet.hbtn.io/rltoken/zh33PXDR6w_qyu7zXUezmw)
+  - [Linux process](https://alx-intranet.hbtn.io/rltoken/px2TdWSjVO8i9SB5gHchAw)
+  - [Linux signal](https://alx-intranet.hbtn.io/rltoken/0NIee0VXMrEp36CFR85GIA)
+
